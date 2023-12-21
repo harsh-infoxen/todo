@@ -13,9 +13,9 @@ class PermissionSeeder extends Seeder
      */
     public function run(): void
     {
-        Permission::create(['name' => 'view todos', 'guard_name' => config('auth.defaults.guard')]);
-        Permission::create(['name' => 'create todos', 'guard_name' => config('auth.defaults.guard')]);
-        Permission::create(['name' => 'edit todos', 'guard_name' => config('auth.defaults.guard')]);
-        Permission::create(['name' => 'delete todos', 'guard_name' => config('auth.defaults.guard')]);
+        Permission::create(['name' => 'view', 'guard_name' => config('auth.defaults.guard')]);
+        Permission::create(['name' => 'create', 'guard_name' => config('auth.defaults.guard')]);
+        Permission::create(['name' => 'edit', 'guard_name' => config('auth.defaults.guard')]);
+        Permission::create(['name' => 'delete', 'guard_name' => config('auth.defaults.guard')]);
     }
 }
