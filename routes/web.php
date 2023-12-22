@@ -11,5 +11,7 @@ Auth::routes();
 
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/home', [App\Http\Controllers\TodoController::class, 'index']);
+    Route::get('/todo', [App\Http\Controllers\TodoController::class, 'index']);
+    Route::put('/todo/{id}/status', [App\Http\Controllers\TodoController::class, 'updateStatus']);
+
 });

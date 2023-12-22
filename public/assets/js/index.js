@@ -22,6 +22,7 @@ function handleClick(todo) {
                     history.go(0);
                 }
             });
+
         })
 
     }
@@ -71,14 +72,12 @@ $(document).ready(function () {
     $(document).on('click', '#todo-checkbox', function () {
         var todoId = $(this).data('todo-id');
         var TodocheckedValue = $(this).prop('checked') ? 1 : 0;
-        var descriptionValue = $('#descip').text();
-        console.log(TodocheckedValue, descriptionValue);
+        console.log(TodocheckedValue);
         
         $.ajax({
-            url: `/todo/${todoId}`,
+            url: `/todo/${todoId}/status/`,
             method: 'post',
             data: {
-                'description': descriptionValue,
                 'completed': TodocheckedValue,
                 'id': todoId,
                 _method: 'PUT',
@@ -86,7 +85,7 @@ $(document).ready(function () {
 
             },
             success: function (data) {
-                console.log("chla");
+                console.log("todo-checkbox Status update");
                 console.log(data);
                 history.go(0);
             },

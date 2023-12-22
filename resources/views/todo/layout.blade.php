@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 
 <head>
@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 
-    <!-- Import Moment.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
    
@@ -34,11 +33,10 @@
     <script type="text/javascript" src="{{URL::asset('assets/js/index.js')}}"></script>
 
     <script>
-        // Format the created_at date using Moment.js
         var createdAt{{ $todo-> id}} = moment("{{$todo->created_at}}");
         document.getElementById("formatted-date_{{$todo->id}}").textContent = createdAt{ { $todo -> id } }.format("MMMM Do YYYY, h:mm:ss a");
     </script>
 
 </body>
 
-</html>
+</html> -->
